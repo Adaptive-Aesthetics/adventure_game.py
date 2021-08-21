@@ -38,9 +38,10 @@ if choice == '1' :
     else:
         print("(2) Run Away")
         print("You retreat back into the field. Luckily, you don't seem to have been followed.")
-
-        if "y" in choice :
-            print("Excellent! Restarting the game")
-        else:
-            print("Thanks for playing! See you next time")
+    choice = input()
+    
+    if "y" in choice :
+        print("Excellent! Restarting the game")
+    else:
+        print("Thanks for playing! See you next time")
                  
