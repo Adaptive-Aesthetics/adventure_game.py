@@ -32,13 +32,9 @@ while True:
             choice = input()
             if "y" in choice :
                 print("Excellent! Restarting the game")
-
             elif 'n'in choice:
                 print("Thanks for playing! See you next time")
                 break
-            
-                
-
         else:
             print("You step forward and knock on the door of the house.")
             print("An evil fairie with stringy white hair and a goti appears.")
@@ -64,15 +60,7 @@ while True:
         else:
             print("(2) Run Away")
             print("You retreat back into the field. Luckily, you don't seem to have been followed.")
-        
-           
-        
-    
-
     elif choice == '2' :
-    
-    
-
         if "sword" in items:
             print("You peer cautiously into the cave.")
             print("You've been here before, and gotten all the good stuff. It's just an empty cave now.")
@@ -92,11 +80,9 @@ while True:
             time.sleep(2)
             items.append("sword")
 
-
-
-print("Enter 1 to knock on the door of the house.")
-print("Enter 2 to peer into the cave.") 
-choice = input()
+    print("Enter 1 to knock on the door of the house.")
+    print("Enter 2 to peer into the cave.") 
+    choice = input()
 
 
 
