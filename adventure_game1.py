@@ -19,6 +19,16 @@ def valid_input(prompt, options):
             return option
         print_pause(f'Sorry, the option "{options}"is invalid. Try Again!')     
 
+def play_game():
+    choice = valid_input("Enter 1 to knock on the door of the house. "
+                         "Enter 2 to peer into cave " 
+                         "Where would you like to go? "
+                         "Please enter '1' or '2' ")
+    if choice == '1' :
+        knock_on_door()
+    elif choice == '2' :
+        peer_into_cave() 
+
 def play_again():
     choice = valid_input("Play again? [y|n]", ['y', 'n'])
     if choice == 'n':
@@ -98,27 +108,15 @@ def peer_into_cave():
         items.append("sword")
 
 
-def play_game():
-    choice = valid_input("Enter 1 to knock on the door of the house. "
-                         "Enter 2 to peer into cave " 
-                         "Where would you like to go? "
-                         "Please enter '1' or '2' ")
-    if choice == '1' :
-        knock_on_door()
-    elif choice == '2' :
-        peer_into_cave() 
-
-
-
 def game():
 
-    # Infinite loop.
+    
     while True:
 
-        # All logic to play.
+        
         play_game()
 
-        # The stop condition.
+   
         play_again()
 
 
