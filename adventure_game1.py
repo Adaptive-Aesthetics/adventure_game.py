@@ -20,10 +20,10 @@ def valid_input(prompt, options):
         print_pause(f'Sorry, the option "{options}"is invalid. Try Again!')     
 
 def play_game():
-    choice = valid_input("Enter 1 to knock on the door of the house. "
-                         "Enter 2 to peer into cave " 
+    choice = valid_input("Enter '1' to knock on the door of the house. "
+                         "Enter '2' to peer into cave " 
                          "Where would you like to go? "
-                         "Please enter '1' or '2' ")
+                         "Please enter '1' or '2'")
     if choice == '1' :
         knock_on_door()
     elif choice == '2' :
