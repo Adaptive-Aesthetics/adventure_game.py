@@ -18,7 +18,7 @@ def valid_input(prompt, options):
         option = input(prompt).lower()
         if option in options:
             return option
-        print_pause(f'Sorry, the option "{options}"is invalid. Try Again!')  
+        print_pause(f'Sorry, the option "{options}"is invalid. Try Again!')
 
 
 def play_again():
@@ -48,42 +48,44 @@ def play_game():
     if choice == '1':
         knock_on_door()
     elif choice == '2':
-        peer_into_cave()    
+        peer_into_cave()
+
 
 def knock_on_door():
     print_pause("You step forward and knock on the door of the house "
                 "An evil "+selected_monster+" with "
                 "stringy white hair and a goti appears "
                 "The wicked "+selected_monster+" ATTACKS YOU!")
-    fight() 
+    fight()
+
 
 def fight():
     choice = valid_input('1-Fight, 2-run or 3-give up? (1|2|3)', ['1', '2', '3'])
     if choice == '1':
         if "sword" in items:
             print_pause("You take your fighting stance! "
-                        "In your hand is the might 'sword of Thorvath!'")  
+                        "In your hand is the might 'sword of Thorvath!'")
             print_pause("An evil "+selected_monster+" with "
                         "stringy white hair and a goti appears "
                         "The wicked "+selected_monster+" ATTACKS YOU! ")
             print_pause("But he is no match for 'The sword of Thorvath!'")
             print_pause("You DEFEAT the "+selected_monster+" ! YOU WIN!")
-            
+
         else:
             print_pause("You take your fight stance "
                         "In your hand is your trusty "
-                        "and rusty (but ineffective) dagger." )
+                        "and rusty (but ineffective) dagger.")
             print_pause("You do your best... "
                         "but your dagger is no match "
                         "for the "+selected_monster+".")
-            print_pause("You have been DEFEATED!")                    
+            print_pause("You have been DEFEATED!")
     if choice == '2':
         print_pause("(2) Run Away")
         print_pause("You retreat back into the field. "
                     "Luckily you don't seem to have been followed ")
     if choice == '3':
         print_pause("Okay, Goodbye!")
-        exit()                   
+        exit()
 
 
 def peer_into_cave():
@@ -115,7 +117,7 @@ def game():
         selected_monster = random.choice(list(all_monsters))
 
         play_game()
-   
+
         play_again()
 
 
